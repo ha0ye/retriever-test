@@ -1,0 +1,33 @@
+language: r
+cache:
+- packages
+- pip3
+sudo: required
+dist: "trusty"
+warnings_are_errors: false
+
+r_packages:
+
+addons:
+  apt:
+    packages:
+      - libgsl0-dbg
+      - libgsl0-dev
+      - libgsl0ldbl
+      - "python3"
+      - "python3-pip"
+    update: true
+
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install libudunits2-dev
+  - sudo apt-get install python3
+  - sudo -H pip3 install --upgrade pip
+  - sudo -H pip3 install git+https://git@github.com/weecology/retriever.git
+  - pip3 show retriever
+  - Rscript main.R
+
+matrix:
+  include:
+  - r: release
+    after_success:

@@ -1,0 +1,17 @@
+Package: aa
+Type: Package
+Title: a a a 
+Version: 0.0.1
+Authors@R: c(
+    person("Hao", "Ye", role = c("aut", "cre"), 
+    	   email = "hao.ye@weecology.org", 
+           comment = c(ORCID = "0000-0002-8630-1458"))
+  )
+Description: aaa
+LazyData: true
+Depends: R (>= 3.4.0)
+Imports:
+    rdataretriever, 
+    reticulate
+Suggests:
+RoxygenNote: 6.1.1
