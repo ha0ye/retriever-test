@@ -8,6 +8,7 @@ Authors@R: c(
            comment = c(ORCID = "0000-0002-8630-1458"))
   )
 Description: aaa
+License: MIT
 LazyData: true
 Depends: R (>= 3.4.0)
 Imports:
