@@ -25,9 +25,9 @@ before_install:
   - sudo -H pip3 install --upgrade pip
   - sudo -H pip3 install git+https://git@github.com/weecology/retriever.git
   - pip3 show retriever
-  - Rscript main.R
 
 matrix:
   include:
   - r: release
     after_success:
+      - Rscript main.R
