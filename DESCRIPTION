@@ -12,7 +12,9 @@ License: MIT
 LazyData: true
 Depends: R (>= 3.4.0)
 Imports:
-    rdataretriever, 
+    rdataretriever (>= 1.1.0),
     reticulate
 Suggests:
 RoxygenNote: 6.1.1
+Remotes: 
+    ropensci/rdataretriever
