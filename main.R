@@ -1,11 +1,12 @@
 
-reticulate::py_module_available("retriever")
+stopifnot(reticulate::py_module_available("retriever"))
 
 r_data_retriever <- reticulate::import("retriever")
 
-datasets <- r_data_retriever$datasets()
+datasets <- r_data_retriever$dataset_names()
 
-message(lapply(datasets, as.character))
+found <- grep("veg-plots-sdl", datasets, value = TRUE)
+stopifnot(length(found) > 0)
 
 r_data_retriever$install_csv("veg-plots-sdl", data_dir = ".")
 
