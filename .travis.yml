@@ -1,7 +1,7 @@
 language: r
 cache:
 - packages
-- pip
+- pip3
 sudo: required
 dist: "trusty"
 warnings_are_errors: false
@@ -14,6 +14,8 @@ addons:
       - libgsl0-dbg
       - libgsl0-dev
       - libgsl0ldbl
+      - "python3"
+      - "python3-pip"
     update: true
 
 before_install:
