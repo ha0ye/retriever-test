@@ -1,3 +1,5 @@
+library(reticulate)
+use_python("/usr/bin/python3")
 
 stopifnot(reticulate::py_module_available("retriever"))
 
