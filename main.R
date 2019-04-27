@@ -1,5 +1,6 @@
 library(reticulate)
 use_python("/usr/bin/python3")
+print(reticulate::py_config())
 
 # check for retriever availability
 stopifnot(py_module_available("retriever"))
